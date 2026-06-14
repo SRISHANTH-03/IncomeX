@@ -1,0 +1,111 @@
+### REGISTER NEW USER
+POST http://localhost:8000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test123@gmail.com",
+  "password": "123456"
+}
+
+###
+
+### LOGIN USER
+POST http://localhost:8000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test123@gmail.com",
+  "password": "123456"
+}
+
+###
+
+### GET PROFILE
+GET http://localhost:8000/api/auth/profile
+Authorization: Bearer PASTE_TOKEN_HERE
+
+###
+
+### GET DASHBOARD SUMMARY
+GET http://localhost:8000/api/dashboard/summary
+Authorization: Bearer PASTE_TOKEN_HERE
+
+###
+
+### CREATE INCOME TRANSACTION
+POST http://localhost:8000/api/transactions
+Content-Type: application/json
+Authorization: Bearer PASTE_TOKEN_HERE
+
+{
+  "title": "Salary",
+  "amount": 50000,
+  "type": "income",
+  "category": "Salary",
+  "date": "2026-06-13"
+}
+
+###
+
+### CREATE EXPENSE TRANSACTION
+POST http://localhost:8000/api/transactions
+Content-Type: application/json
+Authorization: Bearer PASTE_TOKEN_HERE
+
+{
+  "title": "Netflix",
+  "amount": 499,
+  "type": "expense",
+  "category": "Entertainment",
+  "date": "2026-06-13"
+}
+
+###
+
+### GET ALL TRANSACTIONS
+GET http://localhost:8000/api/transactions
+Authorization: Bearer PASTE_TOKEN_HERE
+
+###
+
+### DELETE TRANSACTION
+DELETE http://localhost:8000/api/transactions/PASTE_TRANSACTION_ID
+Authorization: Bearer PASTE_TOKEN_HERE
+
+###
+
+### CREATE BUDGET
+POST http://localhost:8000/api/budgets
+Content-Type: application/json
+Authorization: Bearer PASTE_TOKEN_HERE
+
+{
+  "category": "Food",
+  "limit": 5000
+}
+
+###
+
+### GET BUDGETS
+GET http://localhost:8000/api/budgets
+Authorization: Bearer PASTE_TOKEN_HERE
+
+###
+
+### CREATE GOAL
+POST http://localhost:8000/api/goals
+Content-Type: application/json
+Authorization: Bearer PASTE_TOKEN_HERE
+
+{
+  "title": "Buy MacBook",
+  "targetAmount": 100000,
+  "currentAmount": 25000
+}
+
+###
+
+### GET GOALS
+GET http://localhost:8000/api/goals
+Authorization: Bearer PASTE_TOKEN_HERE

@@ -1,0 +1,21 @@
+import API from "./api";
+
+export const getSummary =
+  async () => {
+    const response =
+      await API.get(
+        "/dashboard/summary"
+      );
+
+    return response.data;
+  };
+
+export const getAnalytics =
+  async () => {
+    const response =
+      await API.get(
+        "/dashboard/analytics"
+      );
+
+    return response.data;
+  };
